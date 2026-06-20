@@ -1,0 +1,68 @@
+aid: evidence-dev
+name: Evidence
+review:
+  question: Does Evidence expose a documented public REST or WebSocket API?
+  answer: false
+  date: '2026-06-20'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. Evidence is a framework/CLI plus a SQL query
+    layer, not an event-driven or streaming service. There is no documented public
+    WebSocket, SSE, or messaging surface to model, so AsyncAPI is out of scope here.
+findings:
+  summary: |
+    Evidence is an open-source (MIT) business-intelligence-as-code framework, not a
+    hosted REST API. Its interface is a Node CLI (for example `npm run sources`,
+    `npm run dev`, `npm run build`, `npm run preview`) plus authored Markdown that
+    embeds SQL. Those SQL queries run in-process through "Universal SQL", a query
+    engine built on DuckDB's WebAssembly distribution that extracts data sources to
+    Parquet so multiple sources can be queried with one SQL dialect. The build output
+    is a static data app / BI website rendered with Svelte and Vite. Evidence Cloud
+    is a managed hosting and deployment product (managed query engine, caching,
+    row-level security, scheduled syncs, browser IDE, AI authoring) but does not
+    publish a documented public REST API for end users. No request-response HTTP API,
+    no WebSocket (ws:// / wss://), and no SSE surface is documented. The OpenAPI
+    artifact in this repo therefore uses an empty `paths: {}` object with an
+    explanatory description rather than fabricating endpoints.
+  transports:
+    - protocol: CLI
+      scheme: local
+      note: Node CLI (dev, build, preview, sources) is the primary interface to the framework.
+      documented: true
+    - protocol: SQL
+      scheme: in-process
+      note: Universal SQL query layer powered by DuckDB-WASM; data sources extracted to Parquet. Not a network API.
+      documented: true
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No documented public REST API base URL. Evidence Cloud is a managed product/control-plane, not an end-user REST API.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Evidence's docs or product pages.
+  endpointsConfirmedRest: []
+  interfaceType: framework/CLI + SQL (DuckDB-WASM Universal SQL); not a REST/WebSocket API
+sources:
+  - url: https://docs.evidence.dev/
+    type: Documentation
+    note: Describes the SQL + Markdown framework that renders a static BI website.
+  - url: https://docs.evidence.dev/reference/cli
+    type: APIReference
+    note: Documents the CLI (dev/build/preview, Vite-based); no REST API surface.
+  - url: https://evidence.dev/universal-sql
+    type: Documentation
+    note: Universal SQL query engine built on DuckDB-WASM; in-process SQL, not a network API.
+  - url: https://evidence.dev/pricing
+    type: Documentation
+    note: Evidence Cloud seat-based pricing (Team/Pro/Enterprise) plus AI credits; no API rate card.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Evidence has no REST or WebSocket protocol surface to model. The interface is a
+    framework/CLI plus an in-process SQL (DuckDB-WASM) query layer, with Evidence
+    Cloud as a managed hosting product. The OpenAPI artifact uses `paths: {}` and an
+    accurate description so the framework is never misrepresented as a REST API, and
+    no AsyncAPI document was authored because no event/streaming surface exists.

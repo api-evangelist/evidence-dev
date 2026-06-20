@@ -1,0 +1,63 @@
+{
+  "info": {
+    "name": "Evidence (Framework - not a REST API)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Evidence is an open-source (MIT) business-intelligence-as-code framework that compiles SQL + Markdown into a static data app via a Node CLI and a DuckDB-WASM Universal SQL query layer. It is not a hosted REST API, so this collection contains no executable HTTP requests - only documentation reference links. See https://docs.evidence.dev/ and https://docs.evidence.dev/reference/cli.",
+      "type": "text/markdown"
+    }
+  },
+  "item": [
+    {
+      "name": "Documentation",
+      "description": {
+        "content": "Reference links to the Evidence framework, CLI, and Universal SQL query layer. Evidence exposes no REST endpoints.",
+        "type": "text/markdown"
+      },
+      "item": [
+        {
+          "name": "Evidence Docs",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://docs.evidence.dev/",
+              "protocol": "https",
+              "host": ["docs", "evidence", "dev"],
+              "path": [""]
+            },
+            "description": "Core documentation for the Evidence SQL + Markdown framework (informational link, not an API call)."
+          },
+          "response": []
+        },
+        {
+          "name": "Evidence CLI Reference",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://docs.evidence.dev/reference/cli",
+              "protocol": "https",
+              "host": ["docs", "evidence", "dev"],
+              "path": ["reference", "cli"]
+            },
+            "description": "CLI reference (dev, build, preview, sources) - the framework interface in place of a REST API (informational link)."
+          },
+          "response": []
+        },
+        {
+          "name": "Universal SQL (DuckDB-WASM)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://evidence.dev/universal-sql",
+              "protocol": "https",
+              "host": ["evidence", "dev"],
+              "path": ["universal-sql"]
+            },
+            "description": "The in-process query engine that runs SQL against data sources extracted to Parquet (informational link)."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

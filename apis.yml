@@ -1,0 +1,108 @@
+aid: evidence-dev
+url: https://raw.githubusercontent.com/api-evangelist/evidence-dev/refs/heads/main/apis.yml
+name: Evidence
+kind: company
+description: Evidence is an open-source (MIT) business-intelligence-as-code framework
+  that turns SQL queries plus Markdown into fast, version-controlled static data apps
+  and dashboards. It is built on Svelte/Vite, runs queries through a DuckDB-WASM
+  "Universal SQL" engine, and is consumed as a framework/CLI rather than a hosted REST
+  API. Evidence Cloud adds managed hosting, a managed query engine, scheduled data
+  syncs, and AI authoring assistance.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Business Intelligence
+- BI as Code
+- SQL
+- Markdown
+- Data Apps
+- Open Source
+created: '2026-06-20'
+modified: '2026-06-20'
+specificationVersion: '0.19'
+apis:
+- aid: evidence-dev:evidence-framework
+  name: Evidence Framework (SQL + Markdown)
+  tags:
+  - Framework
+  - CLI
+  - SQL
+  - Markdown
+  - Static Site
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.evidence.dev/
+  properties:
+  - url: https://docs.evidence.dev/
+    type: Documentation
+  - url: https://docs.evidence.dev/reference/cli
+    type: APIReference
+  - url: https://github.com/evidence-dev/evidence
+    type: GitHub
+  - url: openapi/evidence-dev-openapi.yml
+    type: OpenAPI
+  description: The open-source core. SQL statements embedded in Markdown files run
+    against configured data sources and render charts and components into a static
+    BI website (Svelte/Vite). The interface is a Node CLI (dev, build, preview, sources)
+    plus authored Markdown - not a hosted REST API.
+- aid: evidence-dev:usql-query-layer
+  name: Evidence USQL / Query Layer
+  tags:
+  - USQL
+  - DuckDB
+  - Query Engine
+  - Parquet
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://evidence.dev/universal-sql
+  properties:
+  - url: https://evidence.dev/universal-sql
+    type: Documentation
+  - url: https://docs.evidence.dev/core-concepts/data-sources/duckdb
+    type: APIReference
+  - url: https://github.com/evidence-dev/evidence
+    type: GitHub
+  - url: openapi/evidence-dev-openapi.yml
+    type: OpenAPI
+  description: Universal SQL, the query engine built into Evidence core and powered
+    by DuckDB's WebAssembly distribution. It extracts data sources to Parquet and
+    lets you query across multiple sources with a single SQL dialect via an open
+    data-source-adapter standard. Consumed in-process through SQL, not via a network
+    REST endpoint.
+- aid: evidence-dev:evidence-cloud
+  name: Evidence Cloud
+  tags:
+  - Cloud
+  - Managed Hosting
+  - Deployment
+  - AI
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://evidence.dev/cloud
+  properties:
+  - url: https://docs.evidence.dev/deployment/evidence-cloud/
+    type: Documentation
+  - url: https://evidence.dev/pricing
+    type: APIReference
+  - url: https://github.com/evidence-dev
+    type: GitHub
+  - url: openapi/evidence-dev-openapi.yml
+    type: OpenAPI
+  description: The managed hosting and deployment platform for Evidence projects.
+    Adds a managed query engine, multi-level caching, row-level security, scheduled
+    data syncs, a browser-based IDE, and AI authoring assistance. Surfaced as a
+    managed product/control-plane, not a documented public REST API for end users.
+common:
+- type: GitHubOrganization
+  url: https://github.com/evidence-dev
+- type: LinkedIn
+  url: https://www.linkedin.com/company/evidence-dev
+- type: Website
+  url: https://evidence.dev/
+- type: Documentation
+  url: https://docs.evidence.dev/
+- type: Plans
+  url: plans/evidence-dev-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/evidence-dev-rate-limits.yml
+- type: FinOps
+  url: finops/evidence-dev-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

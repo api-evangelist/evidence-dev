@@ -1,0 +1,161 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Evidence
+providerId: evidence-dev
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Business Intelligence
+- BI as Code
+- SQL
+- Markdown
+- Data Apps
+- Open Source
+- Plans
+description: >-
+  Evidence has two commercial shapes. The open-source framework (Evidence core,
+  including the Universal SQL / DuckDB query layer) is free under the MIT license and
+  can be self-hosted on Netlify, Vercel, or your own infrastructure at no charge.
+  Evidence Cloud is the managed hosting product priced per developer/user per month
+  with bundled monthly AI credits and metered overage on additional credits. Because
+  Evidence is a framework/CLI rather than a metered REST API, there are no per-token
+  or per-request API rates; pricing is seat-based plus AI-credit usage. Specific
+  Evidence Cloud tier figures are captured here as published but are not reconciled.
+notes: >-
+  Open-source core is MIT-licensed and free. Evidence Cloud tier prices and AI-credit
+  allowances below reflect the public pricing page at the time of writing and should
+  be re-verified at https://evidence.dev/pricing during reconciliation.
+sources:
+- https://evidence.dev/pricing
+- https://docs.evidence.dev/
+- https://github.com/evidence-dev/evidence
+plans:
+- id: evidence-open-source
+  name: Open Source (MIT)
+  type: free
+  description: >-
+    The full Evidence framework - SQL + Markdown authoring, the Universal SQL /
+    DuckDB-WASM query layer, and static-site build - free under the MIT license and
+    self-hostable anywhere.
+  entries:
+  - label: Open-Source Framework
+    name: open_source_framework
+    type: free
+    metric: license
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: free (MIT license)
+    userMultiplied: false
+  elements:
+  - name: SQL + Markdown Framework
+  - name: Universal SQL / DuckDB Query Layer
+  - name: Static Site Build (Svelte/Vite)
+  - name: Self-Hosting (Netlify / Vercel / own server)
+- id: evidence-cloud-team
+  name: Evidence Cloud Team
+  type: paid
+  description: >-
+    Managed hosting for Evidence projects with unlimited users and a bundled monthly
+    AI-credit allowance per user.
+  entries:
+  - label: Team Seat
+    name: team_seat
+    type: flat
+    metric: user
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $15 per user/month
+    userMultiplied: true
+  - label: AI Credits (included)
+    name: team_ai_credits
+    type: usage
+    metric: ai_credits
+    limit: 1000
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 1,000 AI credits/user/month included
+    userMultiplied: true
+  elements:
+  - name: Managed Hosting
+  - name: Managed Query Engine
+  - name: Scheduled Data Syncs
+  - name: AI Authoring Assistance
+- id: evidence-cloud-pro
+  name: Evidence Cloud Pro
+  type: paid
+  description: >-
+    Everything in Team plus a larger bundled monthly AI-credit allowance per user.
+  entries:
+  - label: Pro Seat
+    name: pro_seat
+    type: flat
+    metric: user
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $25 per user/month
+    userMultiplied: true
+  - label: AI Credits (included)
+    name: pro_ai_credits
+    type: usage
+    metric: ai_credits
+    limit: 3000
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 3,000 AI credits/user/month included
+    userMultiplied: true
+  elements:
+  - name: Everything in Team
+  - name: Higher AI Credit Allowance
+- id: evidence-cloud-enterprise
+  name: Evidence Cloud Enterprise
+  type: enterprise
+  description: >-
+    Custom per-user pricing with a custom AI-credit volume, plus enterprise terms,
+    security, and support. Contact Evidence sales.
+  entries:
+  - label: Enterprise Agreement
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: custom per user/month - contact sales
+    userMultiplied: false
+  elements:
+  - name: Custom AI Credit Volume
+  - name: Row-Level Security
+  - name: Enterprise Support
+- id: evidence-ai-credit-overage
+  name: AI Credit Overage
+  type: usage
+  description: >-
+    AI credits consumed beyond the included monthly allowance are billed per credit
+    across all paid tiers.
+  entries:
+  - label: Additional AI Credits
+    name: ai_credit_overage
+    type: usage
+    metric: ai_credits
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $0.01 per credit
+    userMultiplied: false
+  elements:
+  - name: Metered AI Credits
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,66 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Evidence
+providerId: evidence-dev
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Business Intelligence
+- BI as Code
+- SQL
+- Markdown
+- Data Apps
+- Open Source
+- Rate Limiting
+- Quotas
+description: >-
+  Evidence is a framework/CLI that compiles SQL + Markdown into a static data app and
+  executes queries locally through a DuckDB-WASM (Universal SQL) engine, so the
+  open-source core has no network rate limits - throughput is bound by your machine
+  and by the limits of whatever upstream data warehouses you connect to. Evidence
+  Cloud, as a managed product, governs usage through per-user seats, bundled monthly
+  AI-credit allowances (with metered overage), and operational quotas such as
+  scheduled-sync frequency and query/caching limits rather than published
+  requests-per-minute API rate limits. Specific quota values are not reconciled here.
+notes: >-
+  No public per-second/per-minute API rate-limit table is published because Evidence
+  is not a hosted REST API. Verify Evidence Cloud seat counts, AI-credit allowances,
+  and sync-frequency limits at https://evidence.dev/pricing and the deployment docs
+  during reconciliation.
+sources:
+- https://evidence.dev/pricing
+- https://docs.evidence.dev/
+- https://docs.evidence.dev/deployment/evidence-cloud/
+responseCodes:
+  throttled: not applicable (framework/CLI; no REST API surface)
+limits:
+- name: Open-Source Framework / CLI
+  scope: local
+  metric: queries
+  limit: bound by local machine and upstream data source limits
+  notes: No network rate limit; Universal SQL runs in-process via DuckDB-WASM.
+- name: Evidence Cloud Seats
+  scope: account
+  metric: users
+  limit: see provider pricing
+  notes: Team is unlimited users; Pro and Enterprise priced per user.
+- name: AI Credits
+  scope: account
+  metric: ai_credits
+  limit: 1,000/user/month (Team), 3,000/user/month (Pro), custom (Enterprise)
+  notes: Overage billed at $0.01/credit; functions as a usage quota, not a request rate.
+- name: Scheduled Data Syncs
+  scope: account
+  metric: sync_frequency
+  limit: see provider documentation
+  notes: Managed sync cadence (minutes to daily) varies by plan/configuration.
+policies:
+- name: Self-Hosted Throughput
+  description: Open-source deployments scale with host resources and upstream warehouse limits; honor your data source's own rate limits.
+- name: Credit-Based Usage
+  description: AI features draw down monthly credit allowances; plan for metered overage above the included pool.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

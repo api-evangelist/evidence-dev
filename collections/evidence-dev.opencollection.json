@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Evidence (Framework - not a REST API)",
+    "version": "1.0",
+    "description": "Evidence is an open-source (MIT) business-intelligence-as-code framework that compiles SQL + Markdown into a static data app via a Node CLI and a DuckDB-WASM Universal SQL query layer. It is not a hosted REST API, so this collection contains no HTTP request items - only documentation references. See https://docs.evidence.dev/ and https://docs.evidence.dev/reference/cli."
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documentation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Evidence Docs",
+            "type": "link"
+          },
+          "link": {
+            "url": "https://docs.evidence.dev/"
+          },
+          "docs": "Core documentation for the Evidence SQL + Markdown framework."
+        },
+        {
+          "info": {
+            "name": "Evidence CLI Reference",
+            "type": "link"
+          },
+          "link": {
+            "url": "https://docs.evidence.dev/reference/cli"
+          },
+          "docs": "CLI reference (dev, build, preview, sources) - the framework interface in place of a REST API."
+        },
+        {
+          "info": {
+            "name": "Universal SQL (DuckDB-WASM)",
+            "type": "link"
+          },
+          "link": {
+            "url": "https://evidence.dev/universal-sql"
+          },
+          "docs": "The in-process query engine that runs SQL against data sources extracted to Parquet."
+        }
+      ]
+    }
+  ]
+}
