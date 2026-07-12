@@ -89,6 +89,10 @@ apis:
     data syncs, a browser-based IDE, and AI authoring assistance. Surfaced as a
     managed product/control-plane, not a documented public REST API for end users.
 common:
+- type: TrustCenter
+  url: security/evidence-dev-trust-center.yml
+- type: DomainSecurity
+  url: security/evidence-dev-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/evidence-dev
 - type: LinkedIn
@@ -103,6 +107,8 @@ common:
   url: rate-limits/evidence-dev-rate-limits.yml
 - type: FinOps
   url: finops/evidence-dev-finops.yml
+- type: Blog
+  url: https://evidence.dev/blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
