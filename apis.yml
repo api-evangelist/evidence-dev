@@ -8,7 +8,19 @@ description: Evidence is an open-source (MIT) business-intelligence-as-code fram
   "Universal SQL" engine, and is consumed as a framework/CLI rather than a hosted REST
   API. Evidence Cloud adds managed hosting, a managed query engine, scheduled data
   syncs, and AI authoring assistance.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/evidence-dev.png
 tags:
 - Business Intelligence
 - BI as Code
