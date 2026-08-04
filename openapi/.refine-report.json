@@ -1,0 +1,14 @@
+{
+  "provider": "evidence-dev",
+  "sources": [
+    "evidence-dev-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived evidence-dev-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
