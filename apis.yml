@@ -49,7 +49,7 @@ apis:
     type: APIReference
   - url: https://github.com/evidence-dev/evidence
     type: GitHub
-  - url: openapi/evidence-dev-openapi.yml
+  - url: openapi/_original/evidence-dev-openapi.yml
     type: OpenAPI
   description: The open-source core. SQL statements embedded in Markdown files run
     against configured data sources and render charts and components into a static
@@ -71,7 +71,7 @@ apis:
     type: APIReference
   - url: https://github.com/evidence-dev/evidence
     type: GitHub
-  - url: openapi/evidence-dev-openapi.yml
+  - url: openapi/_original/evidence-dev-openapi.yml
     type: OpenAPI
   description: Universal SQL, the query engine built into Evidence core and powered
     by DuckDB's WebAssembly distribution. It extracts data sources to Parquet and
@@ -94,7 +94,7 @@ apis:
     type: APIReference
   - url: https://github.com/evidence-dev
     type: GitHub
-  - url: openapi/evidence-dev-openapi.yml
+  - url: openapi/_original/evidence-dev-openapi.yml
     type: OpenAPI
   description: The managed hosting and deployment platform for Evidence projects.
     Adds a managed query engine, multi-level caching, row-level security, scheduled
