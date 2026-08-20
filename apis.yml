@@ -23,6 +23,13 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/evidence-dev.png
 tags:
 - Business Intelligence
+- BI-as-Code
+- SQL
+- Markdown
+- Data Apps
+- Open-Source
+tags_raw:
+- Business Intelligence
 - BI as Code
 - SQL
 - Markdown
@@ -81,6 +88,11 @@ apis:
 - aid: evidence-dev:evidence-cloud
   name: Evidence Cloud
   tags:
+  - Cloud
+  - Managed Hosting
+  - Deployment
+  - Artificial Intelligence
+  tags_raw:
   - Cloud
   - Managed Hosting
   - Deployment
