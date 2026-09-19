@@ -57,6 +57,12 @@ apis:
   - CLI
   - SQL
   - Markdown
+  - Static Sites
+  tags_raw:
+  - Framework
+  - CLI
+  - SQL
+  - Markdown
   - Static Site
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://docs.evidence.dev/
