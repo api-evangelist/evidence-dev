@@ -9,15 +9,21 @@ description: Evidence is an open-source (MIT) business-intelligence-as-code fram
   API. Evidence Cloud adds managed hosting, a managed query engine, scheduled data
   syncs, and AI authoring assistance.
 deliveryModel:
-  model: saas
-  open_source: false
+  model: open-core
+  license: MIT
+  license_evidence:
+    repo: evidence-dev/evidence
+    spdx: MIT
+    stars: 6959
+  open_source: true
   commercial: true
   callable_host: false
-  label: Hosted service · you call their endpoint
+  label: Open core · an OSS project plus a commercial hosted product
   confidence: medium
   source:
   - pricing
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -38,7 +44,7 @@ tags:
 - SQL
 - Markdown
 - Data Apps
-- Open-Source
+- Open Source
 tags_raw:
 - Business Intelligence
 - BI as Code
@@ -46,6 +52,7 @@ tags_raw:
 - Markdown
 - Data Apps
 - Open Source
+- Open-Source
 created: '2026-06-20'
 modified: '2026-06-20'
 specificationVersion: '0.23'
