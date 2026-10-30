@@ -1,4 +1,4 @@
-# Evidence (evidence-dev)
+# Evidence
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,104 +66,111 @@
 
 Evidence is an open-source (MIT) business-intelligence-as-code framework that turns SQL queries plus Markdown into fast, version-controlled static data apps and dashboards. It is built on Svelte/Vite, runs queries through a DuckDB-WASM "Universal SQL" engine, and is consumed as a framework/CLI rather than a hosted REST API. Evidence Cloud adds managed hosting, a managed query engine, scheduled data syncs, and AI authoring assistance.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/evidence-dev/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/evidence-dev/refs/heads/main/apis.yml)
+**Areas:** Business Intelligence · BI-as-Code · SQL · Markdown · Data Apps · Open Source
 
-## Tags
+## Evidence on APIs.io
 
-- Business Intelligence
-- BI as Code
-- SQL
-- Markdown
-- Data Apps
-- Open Source
+Everything profiled for Evidence is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/evidence-dev/](https://apis.io/providers/evidence-dev/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (3)
 
-- **Created:** 2026-06-20
-- **Modified:** 2026-06-20
+- [Evidence Framework (SQL + Markdown)](https://apis.io/apis/evidence-dev/evidence-framework/) — The open-source core. SQL statements embedded in Markdown files run against configured data sources and render charts and components into a static BI…
+- [Evidence USQL / Query Layer](https://apis.io/apis/evidence-dev/usql-query-layer/) — Universal SQL, the query engine built into Evidence core and powered by DuckDB's WebAssembly distribution. It extracts data sources to Parquet and lets you…
+- [Evidence Cloud](https://apis.io/apis/evidence-dev/evidence-cloud/) — The managed hosting and deployment platform for Evidence projects. Adds a managed query engine, multi-level caching, row-level security, scheduled data…
 
-## APIs
+### Published properties
 
-> Note: Evidence's "interface" is a framework/CLI plus SQL against your data sources. It is a build tool that compiles SQL + Markdown into a static data app - not a hosted REST API. The surfaces below are documented as framework/query-layer/product surfaces, not network endpoints.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Evidence Framework (SQL + Markdown)
+#### Collections (1)
 
-The open-source core. SQL statements embedded in Markdown files run against configured data sources and render charts and components into a static BI website (Svelte/Vite). The interface is a Node CLI (dev, build, preview, sources) plus authored Markdown - not a hosted REST API.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://docs.evidence.dev/](https://docs.evidence.dev/)
+- [Evidence (Framework - not a REST API)](https://apis.io/collections/evidence-dev/open-evidence-dev/)
 
-#### Tags
+#### Security (2)
 
-- Framework
-- CLI
-- SQL
-- Markdown
-- Static Site
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Evidence Dev Domain Security](https://apis.io/security/evidence-dev/evidence-dev-domain-security/)
+- [Evidence Dev Trust Center](https://apis.io/security/evidence-dev/evidence-dev-trust-center/)
 
-- [Documentation](https://docs.evidence.dev/)
-- [API Reference](https://docs.evidence.dev/reference/cli)
-- [GitHub](https://github.com/evidence-dev/evidence)
-- [OpenAPI](openapi/evidence-dev-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/evidence-dev.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/evidence-dev.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Evidence USQL / Query Layer
+Published plans, tiers and prices.
 
-Universal SQL, the query engine built into Evidence core and powered by DuckDB's WebAssembly distribution. It extracts data sources to Parquet and lets you query across multiple sources with a single SQL dialect via an open data-source-adapter standard. Consumed in-process through SQL, not via a network REST endpoint.
+- [Evidence Dev Plans Pricing](https://apis.io/plans/evidence-dev/evidence-dev-plans-pricing/)
 
-- **Human URL:** [https://evidence.dev/universal-sql](https://evidence.dev/universal-sql)
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- USQL
-- DuckDB
-- Query Engine
-- Parquet
+- [Evidence Dev Rate Limits](https://apis.io/rate-limits/evidence-dev/evidence-dev-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://evidence.dev/universal-sql)
-- [API Reference](https://docs.evidence.dev/core-concepts/data-sources/duckdb)
-- [GitHub](https://github.com/evidence-dev/evidence)
-- [OpenAPI](openapi/evidence-dev-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/evidence-dev.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/evidence-dev.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Evidence Cloud
+- [Evidence Dev Finops](https://apis.io/finops/evidence-dev/evidence-dev-finops/)
 
-The managed hosting and deployment platform for Evidence projects. Adds a managed query engine, multi-level caching, row-level security, scheduled data syncs, a browser-based IDE, and AI authoring assistance. Surfaced as a managed product/control-plane, not a documented public REST API for end users.
+## Where to find this API
 
-- **Human URL:** [https://evidence.dev/cloud](https://evidence.dev/cloud)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Cloud
-- Managed Hosting
-- Deployment
-- AI
-
-#### Properties
-
-- [Documentation](https://docs.evidence.dev/deployment/evidence-cloud/)
-- [API Reference](https://evidence.dev/pricing)
-- [GitHub](https://github.com/evidence-dev)
-- [OpenAPI](openapi/evidence-dev-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/evidence-dev.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/evidence-dev.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/evidence-dev)
-- [LinkedIn](https://www.linkedin.com/company/evidence-dev)
 - [Website](https://evidence.dev/)
 - [Documentation](https://docs.evidence.dev/)
-- [Plans](plans/evidence-dev-plans-pricing.yml)
-- [Rate Limits](rate-limits/evidence-dev-rate-limits.yml)
-- [Fin Ops](finops/evidence-dev-finops.yml)
+- [Blog](https://evidence.dev/blog)
+- [GitHub](https://github.com/evidence-dev)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 25.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 15.8 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/evidence-dev/](https://apis.io/providers/evidence-dev/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Evidence: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/evidence-dev/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
